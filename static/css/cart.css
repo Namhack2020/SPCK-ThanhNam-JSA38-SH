@@ -1,0 +1,169 @@
+* {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+header .top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+}
+header .top-bar ul {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header .top-bar .account {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+header .top-bar .account img {
+  width: 30px;
+  height: auto;
+}
+
+.logo {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.logo h1 {
+  color: #003366;
+  margin-top: 10px;
+}
+.logo img {
+  width: auto;
+  height: 50px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.search-bar input {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+.search-bar button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #003366;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.search-bar button:hover {
+  background-color: #00ffcc;
+  color: black;
+}
+nav {
+  background-color: #1a1a1a;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 12px 0;
+}
+nav ul li a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: #00ffcc;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.item-img {
+  width: 80px;
+  height: auto;
+  margin-right: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.item-info h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #003366;
+}
+
+.item-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #b12704;
+  font-size: 16px;
+}
+
+.total {
+  text-align: right;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.checkout {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.checkout button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.checkout button:hover {
+  background-color: #00ffcc;
+  color: black;
+}
+
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}

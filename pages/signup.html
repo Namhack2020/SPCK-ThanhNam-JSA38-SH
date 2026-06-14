@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="../static/css/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="../static/image/logo.png" alt="Thế giới công nghệ" />
+        <h1>Thế giới công nghệ</h1>
+      </div>
+
+      <h2>Đăng kí</h2>
+
+      <form>
+        <input id="username" placeholder="Tên" required />
+        <input id="email" placeholder="Email" type="email" required />
+        <input id="password" placeholder="Mật khẩu" type="password" required />
+        <input id="confirm_password" placeholder="Nhập lại mật khẩu" type="password" required />
+
+        <button type="submit" onclick="signUp(event)">Đăng kí</button>
+      </form>
+    </div>
+    <script src="../static/js/signup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thế giới công nghệ</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <ul>
+          <li>Cam kết giá tốt nhất</li>
+          <li>Miễn phí vận chuyển</li>
+          <li>Đổi trả trong 7 ngày</li>
+        </ul>
+        <div class="account">
+          <a href="pages/login.html"><img src="static/image/account.webp" /></a>
+        </div>
+      </div>
+
+      <div class="logo">
+        <img src="static/image/logo.png" alt="Thế giới công nghệ" />
+        <h1>Thế giới công nghệ</h1>
+        <div class="search-bar">
+          <input type="text" placeholder="Nhập từ khóa tìm kiếm" />
+          <button>Tìm</button>
+        </div>
+        <a href="pages/cart.html">
+          <div class="shopping-cart">
+            Giỏ Hàng
+            <img
+              src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/all-3/shopping-cart-9xhllmo2cb79djc9j7b5kb.png/shopping-cart-pe974q2wd8bzu5cueg3qr.png?_a=DATAiZAAZAA0"
+              alt=""
+            />
+          </div>
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li><a href="#">Bảo hành</a></li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <aside class="sidebar">
+        <h3>Danh mục sản phẩm</h3>
+        <ul>
+          <li data-target="submenu">Laptop</li>
+          <li data-target="submenu">PC & Máy tính</li>
+          <li data-target="submenu">Máy tính bảng</li>
+          <li data-target="submenu">Gaming Gear</li>
+          <li data-target="submenu">Linh kiện máy tính</li>
+          <li data-target="submenu">Phụ kiện & Thiết bị văn phòng</li>
+          <li data-target="submenu">Thiết bị lưu trữ & mạng</li>
+        </ul>
+      </aside>
+
+      <section class="banner">
+        <div class="banner-images">
+          <img class="banner_image" src="static/image/banner.jpg" alt="..." /><img class="banner_image" src="static/image/banner2.jpg" alt="..." />
+          
+        </div>
+        <div class="submenu" id="submenu">
+              <div class="submenu-column">
+                <h4>Thương hiệu Laptop</h4>
+                <ul>
+                  <li>ASUS</li>
+                  <li>ACER</li>
+                  <li>MSI</li>
+                  <li>Lenovo</li>
+                  <li>Dell</li>
+                  <li>HP</li>
+                  <li>LG</li>
+                </ul>
+              </div>
+              <div class="submenu-column">
+                <h4>Giá bán</h4>
+                <ul>
+                  <li>Dưới 15 triệu</li>
+                  <li>Từ 15 đến 20 triệu</li>
+                  <li>Trên 20 triệu</li>
+                </ul>
+              </div>
+              <div class="submenu-column">
+                <h4>CPU Intel - AMD</h4>
+                <ul>
+                  <li>Intel Core i3</li>
+                  <li>Intel Core i5</li>
+                  <li>Intel Core i7</li>
+                  <li>AMD Ryzen</li>
+                </ul>
+              </div>
+              <div class="submenu-column">
+                <h4>Nhu cầu sử dụng</h4>
+                <ul>
+                  <li>Đồ họa - Studio</li>
+                  <li>Học sinh - Sinh viên</li>
+                  <li>Mỏng nhẹ cao cấp</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+      <section class="best-seller">
+        <h2>MẶT HÀNG BÁN CHẠY</h2>
+
+        <div class="category">
+          <h3>Laptop</h3>
+          <div class="product-grid" id="laptop-grid">
+            <div class="product-card">
+              <a href="pages/LaptopA.html"
+                ><img src="static/image/laptop1.png" alt="Laptop A"
+              /></a>
+              <span class="discount">-20%</span>
+              <p>15.000.000đ<del>18.990.000đ</del></p>
+              <a href="pages/LaptopA.html"><h5>Laptop A</h5></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h3>Smartphone</h3>
+          <div class="product-grid" id="smartphones-grid">
+            <div class="product-card">
+              <a href="pages/LaptopA.html"
+                ><img src="static/image/laptop1.png" alt="Laptop A"
+              /></a>
+              <span class="discount">-20%</span>
+              <p>15.000.000đ<del>18.990.000đ</del></p>
+              <a href="pages/LaptopA.html"><h5>Laptop A</h5></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Liên hệ: 0911070810 | <a href="#">Facebook </a>| <a href="#">Zalo</a>
+      </p>
+    </footer>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>
