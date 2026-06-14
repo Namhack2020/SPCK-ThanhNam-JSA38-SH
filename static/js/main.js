@@ -63,7 +63,7 @@ function loadLaptops() {
         "<p>Không thể tải dữ liệu từ DummyJSON.</p>";
   });
 }
-async function loadSmartphones() {
+function loadSmartphones() {
   fetch("https://dummyjson.com/products/category/Smartphones")
     .then(response => {
       if (!response.ok) {
