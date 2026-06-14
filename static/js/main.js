@@ -91,3 +91,31 @@ function loadSmartphones() {
 
 loadLaptops();
 loadSmartphones();
+
+const searchBar = document.getElementById("search-bar");
+const resultsContainer = document.getElementById("search-results");
+
+searchBar.addEventListener("input", function() {
+  const query = searchBar.value.trim().toLowerCase();
+  if (!query){
+    resultsContainer.innerHTML="";
+    resultsContainer.style.display = "none";
+    return;
+  } 
+
+  fetch(`https://dummyjson.com/products/search?q=${query}`)
+    .then(response => response.json())
+    .then(data => {
+      const topFive = data.products.slice(0, 5);
+
+      resultsContainer.innerHTML = topFive.map(p => `
+        <a href="pages/product.html?id=${p.id}">
+          <div>${p.title}</div>
+        </a>
+      `).join("");
+      resultsContainer.style.display = 'block';
+    })
+    .catch(error => {
+      console.error(error);
+    });
+});

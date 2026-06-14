@@ -59,6 +59,7 @@ header .top-bar .account img {
   display: flex;
   align-items: center;
   margin-left: 40px;
+  position: relative;
 }
 .search-bar input {
   padding: 8px;
@@ -66,6 +67,29 @@ header .top-bar .account img {
   border: 1px solid #ccc;
   border-radius: 4px 0 0 4px;
   outline: none;
+}
+.search-results {
+  position: absolute;
+  top:100%;
+  background: white;
+  border: 1px solid #ccc;
+  width: 200px;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.search-item img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 .search-bar button {
   padding: 8px 15px;
