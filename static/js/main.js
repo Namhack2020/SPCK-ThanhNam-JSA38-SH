@@ -38,56 +38,56 @@ document.querySelectorAll(".sidebar ul li").forEach(li => {
   });
 });
 
-async function loadLaptops() {
-  try {
-    // Fetch dummy laptop data
-    const response = await fetch("https://dummyjson.com/products/category/laptops");
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-
-    const container = document.getElementById("laptop-grid");
-    container.innerHTML = data.products.map(p => `
-      <div class="product-card">
-        <a href="pages/product.html?id=${p.id}">
-          <img src="${p.thumbnail}" alt="${p.title}" />
-          <h3>${p.brand} ${p.title}</h3>
-        </a>
-      </div>
-    `).join("");
-  } catch (error) {
-    console.error("Error loading dummy laptops:", error);
-    document.getElementById("product-grid").innerHTML =
-      "<p>Không thể tải dữ liệu từ DummyJSON.</p>";
-  }
+function loadLaptops() {
+  fetch("https://dummyjson.com/products/category/laptops")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      const container = document.getElementById("laptop-grid");
+      container.innerHTML = data.products.map(p => `
+        <div class="product-card">
+          <a href="pages/product.html?id=${p.id}">
+            <img src="${p.thumbnail}" alt="${p.title}" />
+            <h3>${p.brand} ${p.title}</h3>
+          </a>
+        </div>
+      `).join("");
+    })
+    .catch (error => {
+      console.error("Error loading dummy laptops:", error);
+      document.getElementById("product-grid").innerHTML =
+        "<p>Không thể tải dữ liệu từ DummyJSON.</p>";
+  });
 }
 async function loadSmartphones() {
-  try {
-    // Fetch dummy laptop data
-    const response = await fetch("https://dummyjson.com/products/category/smartphones");
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-
-    const container = document.getElementById("smartphones-grid");
-    container.innerHTML = data.products.map(p => `
-      <div class="product-card">
-        <a href="pages/product.html?id=${p.id}">
-          <img src="${p.thumbnail}" alt="${p.title}" />
-          <h3>${p.brand} ${p.title}</h3>
-        </a>
-      </div>
-    `).join("");
-  } catch (error) {
+  fetch("https://dummyjson.com/products/category/Smartphones")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      const container = document.getElementById("smartphones-grid");
+      container.innerHTML = data.products.map(p => `
+       <div class="product-card">
+         <a href="pages/product.html?id=${p.id}">
+           <img src="${p.thumbnail}" alt="${p.title}" />
+           <h3>${p.brand} ${p.title}</h3>
+         </a>
+       </div>
+      `).join("");
+    })
+   .catch (error => {
     console.error("Error loading dummy smartphones:", error);
     document.getElementById("smartphones-grid").innerHTML =
       "<p>Không thể tải dữ liệu từ DummyJSON.</p>";
-  }
+  });
 }
 
 loadLaptops();
-loadSmartphones()
+loadSmartphones();
